@@ -1,11 +1,13 @@
-import cherrypy,os
+import cherrypy, os
+import generador
 
 
 class goodAndDevil(object):
     @cherrypy.expose
     def index(self):
-        return """
-<!DOCTYPE html>
+        m = open("public/item.csv", "r")
+        miGenerador = generador.Generador()
+        tabla = """<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -19,7 +21,6 @@ class goodAndDevil(object):
     <link href="static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
-
 <body>
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
@@ -33,7 +34,6 @@ class goodAndDevil(object):
             </li>
         </ul>
     </nav>
-
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
@@ -43,30 +43,22 @@ class goodAndDevil(object):
             <a href="#about" class="btn btn-dark btn-lg">Coming soon</a>
         </div>
     </header>
-
         <!-- About -->
         <section id="about" class="about">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-                        <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+                    [ CONT1 ]
                     </div>
                 </div>
                 <!-- /.row -->
             </div>
             <!-- /.container -->
         </section>
-
-
-
-
     <!-- jQuery -->
 <script src="static/js/jquery.js"></script>
-
 <!-- Bootstrap Core JavaScript -->
 <script src="static/js/bootstrap.min.js"></script>
-
 <!-- Custom Theme JavaScript -->
 <script>
 // Closes the sidebar menu
@@ -140,13 +132,13 @@ var onMapClickHandler = function(event) {
     // Enable map zooming with mouse scroll when the user clicks the map
 $('.map').on('click', onMapClickHandler);
 </script>
-
 </body>
-
 </html>
-
-
 """
+
+        return tabla.replace('[ CONT1 ]', miGenerador.generaTable(m))
+
+
 
 if __name__ == '__main__':
     conf = {
@@ -159,6 +151,6 @@ if __name__ == '__main__':
             'tools.staticdir.dir': './public'
         }
     }
-    cherrypy.config.update({'server.socket_host': '0.0.0.0', })
+    cherrypy.config.update({'server.socket_host': '127.0.0.1', })
     cherrypy.config.update({'server.socket_port': int(os.environ.get('PORT', '5000')), })
     cherrypy.quickstart(goodAndDevil(), '/', conf)
