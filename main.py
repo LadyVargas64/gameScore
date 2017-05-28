@@ -1,11 +1,15 @@
 import cherrypy, os
 import generador
+import csv
 
 
 class goodAndDevil(object):
     @cherrypy.expose
     def index(self):
         m = open("public/item.csv", "r")
+
+        reader = csv.reader(m)
+
         miGenerador = generador.Generador()
         tabla = """<!DOCTYPE html>
 <html lang="en">
@@ -18,6 +22,7 @@ class goodAndDevil(object):
     <title>G&D</title>
     <link href="static/css/bootstrap.min.css" rel="stylesheet">
     <link href="static/css/stylish-portfolio.css" rel="stylesheet">
+    <link href="static/css/student.css" rel="stylesheet">
     <link href="static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
@@ -48,7 +53,75 @@ class goodAndDevil(object):
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                    [ CONT1 ]
+                    <div class="wrap">
+                    <div id="TabbedPanels1" class="TabbedPanels">
+                            <ul class="TabbedPanelsTabGroup">
+                                <li class="TabbedPanelsTab itm1" tabindex="0">Ranking</li>
+                                <li class="TabbedPanelsTab itm2" tabindex="0">Logros</li>
+                                <li class="TabbedPanelsTab itm3" tabindex="0">Perfil</li>
+                            </ul>
+                            <div class="TabbedPanelsContentGroup">
+                                
+                                    [ CONT1 ]
+                                    
+                                   
+                                <div class="TabbedPanelsContent">
+                                    <div class="ach lv1">
+                                        <div class="cl c1"><div class="tooltip"><span class="tooltiptext">Logro 1</span></div></div>
+                                        <div class="cl c2"><div class="tooltip"><span class="tooltiptext">Logro 2</span></div></div>
+                                        <div class="cl c3"><div class="tooltip"><span class="tooltiptext">Logro 3</span></div></div>
+                                    </div>
+                                    <div class="ach lv2">
+                                        <div class="cl c1"><div class="tooltip"><span class="tooltiptext">Logro 4</span></div></div>
+                                        <div class="cl c2"><div class="tooltip"><span class="tooltiptext">Logro 5</span></div></div>
+                                        <div class="cl c3"><div class="tooltip"><span class="tooltiptext">Logro 6</span></div></div>
+                                    </div>
+                                    <div class="ach lv3">
+                                        <div class="cl c1"><div class="tooltip"><span class="tooltiptext">Logro 7</span></div></div>
+                                        <div class="cl c2"><div class="tooltip"><span class="tooltiptext">Logro 8</span></div></div>
+                                        <div class="cl c3"><div class="tooltip"><span class="tooltiptext">Logro 9</span></div></div>
+                                    </div>
+                                    <div class="ach lv4">
+                                        <div class="cl c1"><div class="tooltip"><span class="tooltiptext">Logro 10</span></div></div>
+                                        <div class="cl c2"><div class="tooltip"><span class="tooltiptext">Logro 11</span></div></div>
+                                        <div class="cl c3"><div class="tooltip"><span class="tooltiptext">Logro 12</span></div></div>
+                                    </div>
+                                    <div class="ach lv5">
+                                        <div class="cl c1"><div class="tooltip"><span class="tooltiptext">Logro 13</span></div></div>
+                                        <div class="cl c2"><div class="tooltip"><span class="tooltiptext">Logro 14</span></div></div>
+                                        <div class="cl c3"><div class="tooltip"><span class="tooltiptext">Logro 15</span></div></div>
+                                    </div>
+                                    <div class="ach lv6">
+                                        <div class="cl c1"><div class="tooltip"><span class="tooltiptext">Logro 16</span></div></div>
+                                        <div class="cl c2"><div class="tooltip"><span class="tooltiptext">Logro 17</span></div></div>
+                                        <div class="cl c3"><div class="tooltip"><span class="tooltiptext">Logro 18</span></div></div>
+                                    </div>
+                                    <div class="ach lv7">
+                                        <div class="cl c1"><div class="tooltip"><span class="tooltiptext">Logro 19</span></div></div>
+                                        <div class="cl c2"><div class="tooltip"><span class="tooltiptext">Logro 20</span></div></div>
+                                        <div class="cl c3"><div class="tooltip"><span class="tooltiptext">Logro 21</span></div></div>
+                                    </div>
+                                </div>
+                                <div class="TabbedPanelsContent">
+                                	<div class="foto"></div>
+                                    
+                                    <div class="info">
+                                   		<div class="lvl">Nivel 10</div><div class="xp">3500 / 10000 XP</div>
+                                    	<h2>Nombre</h2>
+                                        <h4>Rango</h4>
+                                        <p>Edad</p> 
+                                        <p>Fecha de Cumpleanos</p>
+                                        <p>Genero</p>
+                                    </div>
+                                    <div class="info_gm">
+                                    	<p>Partidas Ganadas</p>
+                                        <p>Partidas Perdidas</p>
+                                        <p>Mayor Puntaje</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     </div>
                 </div>
                 <!-- /.row -->
@@ -59,6 +132,8 @@ class goodAndDevil(object):
 <script src="static/js/jquery.js"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/SpryTabbedPanels.js"></script>
+<script type="text/javascript"> var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1"); </script>
 <!-- Custom Theme JavaScript -->
 <script>
 // Closes the sidebar menu
