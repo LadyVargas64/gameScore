@@ -33,15 +33,22 @@ class Generador:
             pst = ''
             if(x <= 3):
                 pst = 'pst'+ str(x)
-                x = x + 1
+                x += 1
 
             tr1 = "<div class ='rnk'>" \
                     "<div class ='pst "+pst+"' ></div>" \
                     "<div class ='dtl' >" \
                         "<p class='ps'>" +str(p+1)+ "</p>" \
-                    "</div>"
+
+            z = 0
             for j in i.split(","):
-                td = td + "<div>" + j + "</div>"
+                z += 1
+                if z == 1:
+                    td = td + "<p class='nm'> "+ j +" </p></div>"
+                elif z == 2:
+                    td = td + "<div class='nvl'> <p> Nv. "+ j +" </p></div>"
+                elif z == 3:
+                    td = td + "<div class='pnt'> <p> Pts: " + j + "</p></div>"
             tr2 = "</div>"
 
             table = table + tr1 + td + tr2

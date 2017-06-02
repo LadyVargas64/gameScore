@@ -67,39 +67,39 @@ class goodAndDevil(object):
                                    
                                 <div class="TabbedPanelsContent">
                                     <div class="ach lv1">
-                                        <div class="cl c1"><div class="tooltip"><span class="tooltiptext">Logro 1</span></div></div>
-                                        <div class="cl c2"><div class="tooltip"><span class="tooltiptext">Logro 2</span></div></div>
-                                        <div class="cl c3"><div class="tooltip"><span class="tooltiptext">Logro 3</span></div></div>
+                                        <div class="cl c1"><div class="tooltips"><span class="tooltiptexts">Logro 1</span></div></div>
+                                        <div class="cl c2"><div class="tooltips"><span class="tooltiptexts">Logro 2</span></div></div>
+                                        <div class="cl c3"><div class="tooltips"><span class="tooltiptexts">Logro 3</span></div></div>
                                     </div>
                                     <div class="ach lv2">
-                                        <div class="cl c1"><div class="tooltip"><span class="tooltiptext">Logro 4</span></div></div>
-                                        <div class="cl c2"><div class="tooltip"><span class="tooltiptext">Logro 5</span></div></div>
-                                        <div class="cl c3"><div class="tooltip"><span class="tooltiptext">Logro 6</span></div></div>
+                                        <div class="cl c1"><div class="tooltips"><span class="tooltiptexts">Logro 4</span></div></div>
+                                        <div class="cl c2"><div class="tooltips"><span class="tooltiptexts">Logro 5</span></div></div>
+                                        <div class="cl c3"><div class="tooltips"><span class="tooltiptexts">Logro 6</span></div></div>
                                     </div>
                                     <div class="ach lv3">
-                                        <div class="cl c1"><div class="tooltip"><span class="tooltiptext">Logro 7</span></div></div>
-                                        <div class="cl c2"><div class="tooltip"><span class="tooltiptext">Logro 8</span></div></div>
-                                        <div class="cl c3"><div class="tooltip"><span class="tooltiptext">Logro 9</span></div></div>
+                                        <div class="cl c1"><div class="tooltips"><span class="tooltiptexts">Logro 7</span></div></div>
+                                        <div class="cl c2"><div class="tooltips"><span class="tooltiptexts">Logro 8</span></div></div>
+                                        <div class="cl c3"><div class="tooltips"><span class="tooltiptexts">Logro 9</span></div></div>
                                     </div>
                                     <div class="ach lv4">
-                                        <div class="cl c1"><div class="tooltip"><span class="tooltiptext">Logro 10</span></div></div>
-                                        <div class="cl c2"><div class="tooltip"><span class="tooltiptext">Logro 11</span></div></div>
-                                        <div class="cl c3"><div class="tooltip"><span class="tooltiptext">Logro 12</span></div></div>
+                                        <div class="cl c1"><div class="tooltips"><span class="tooltiptexts">Logro 10</span></div></div>
+                                        <div class="cl c2"><div class="tooltips"><span class="tooltiptexts">Logro 11</span></div></div>
+                                        <div class="cl c3"><div class="tooltips"><span class="tooltiptexts">Logro 12</span></div></div>
                                     </div>
                                     <div class="ach lv5">
-                                        <div class="cl c1"><div class="tooltip"><span class="tooltiptext">Logro 13</span></div></div>
-                                        <div class="cl c2"><div class="tooltip"><span class="tooltiptext">Logro 14</span></div></div>
-                                        <div class="cl c3"><div class="tooltip"><span class="tooltiptext">Logro 15</span></div></div>
+                                        <div class="cl c1"><div class="tooltips"><span class="tooltiptexts">Logro 13</span></div></div>
+                                        <div class="cl c2"><div class="tooltips"><span class="tooltiptexts">Logro 14</span></div></div>
+                                        <div class="cl c3"><div class="tooltips"><span class="tooltiptexts">Logro 15</span></div></div>
                                     </div>
                                     <div class="ach lv6">
-                                        <div class="cl c1"><div class="tooltip"><span class="tooltiptext">Logro 16</span></div></div>
-                                        <div class="cl c2"><div class="tooltip"><span class="tooltiptext">Logro 17</span></div></div>
-                                        <div class="cl c3"><div class="tooltip"><span class="tooltiptext">Logro 18</span></div></div>
+                                        <div class="cl c1"><div class="tooltips"><span class="tooltiptexts">Logro 16</span></div></div>
+                                        <div class="cl c2"><div class="tooltips"><span class="tooltiptexts">Logro 17</span></div></div>
+                                        <div class="cl c3"><div class="tooltips"><span class="tooltiptexts">Logro 18</span></div></div>
                                     </div>
                                     <div class="ach lv7">
-                                        <div class="cl c1"><div class="tooltip"><span class="tooltiptext">Logro 19</span></div></div>
-                                        <div class="cl c2"><div class="tooltip"><span class="tooltiptext">Logro 20</span></div></div>
-                                        <div class="cl c3"><div class="tooltip"><span class="tooltiptext">Logro 21</span></div></div>
+                                        <div class="cl c1"><div class="tooltips"><span class="tooltiptexts">Logro 19</span></div></div>
+                                        <div class="cl c2"><div class="tooltips"><span class="tooltiptexts">Logro 20</span></div></div>
+                                        <div class="cl c3"><div class="tooltips"><span class="tooltiptexts">Logro 21</span></div></div>
                                     </div>
                                 </div>
                                 <div class="TabbedPanelsContent">
