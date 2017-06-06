@@ -6,11 +6,14 @@ import csv
 class goodAndDevil(object):
     @cherrypy.expose
     def index(self):
-        m = open("public/item.csv", "r")
-
-        reader = csv.reader(m)
+        rnk = open("public/item.csv", "r")
+        lgr = open("public/item.csv", "r")
+        inf = open("public/item.csv", "r")
 
         miGenerador = generador.Generador()
+        miGenerador2 = generador.Generador()
+        miGenerador3 = generador.Generador()
+
         tabla = """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,61 +67,9 @@ class goodAndDevil(object):
                                 
                                     [ CONT1 ]
                                     
-                                   
-                                <div class="TabbedPanelsContent">
-                                    <div class="ach lv1">
-                                        <div class="cl c1"><div class="tooltips"><span class="tooltiptexts">Logro 1</span></div></div>
-                                        <div class="cl c2"><div class="tooltips"><span class="tooltiptexts">Logro 2</span></div></div>
-                                        <div class="cl c3"><div class="tooltips"><span class="tooltiptexts">Logro 3</span></div></div>
-                                    </div>
-                                    <div class="ach lv2">
-                                        <div class="cl c1"><div class="tooltips"><span class="tooltiptexts">Logro 4</span></div></div>
-                                        <div class="cl c2"><div class="tooltips"><span class="tooltiptexts">Logro 5</span></div></div>
-                                        <div class="cl c3"><div class="tooltips"><span class="tooltiptexts">Logro 6</span></div></div>
-                                    </div>
-                                    <div class="ach lv3">
-                                        <div class="cl c1"><div class="tooltips"><span class="tooltiptexts">Logro 7</span></div></div>
-                                        <div class="cl c2"><div class="tooltips"><span class="tooltiptexts">Logro 8</span></div></div>
-                                        <div class="cl c3"><div class="tooltips"><span class="tooltiptexts">Logro 9</span></div></div>
-                                    </div>
-                                    <div class="ach lv4">
-                                        <div class="cl c1"><div class="tooltips"><span class="tooltiptexts">Logro 10</span></div></div>
-                                        <div class="cl c2"><div class="tooltips"><span class="tooltiptexts">Logro 11</span></div></div>
-                                        <div class="cl c3"><div class="tooltips"><span class="tooltiptexts">Logro 12</span></div></div>
-                                    </div>
-                                    <div class="ach lv5">
-                                        <div class="cl c1"><div class="tooltips"><span class="tooltiptexts">Logro 13</span></div></div>
-                                        <div class="cl c2"><div class="tooltips"><span class="tooltiptexts">Logro 14</span></div></div>
-                                        <div class="cl c3"><div class="tooltips"><span class="tooltiptexts">Logro 15</span></div></div>
-                                    </div>
-                                    <div class="ach lv6">
-                                        <div class="cl c1"><div class="tooltips"><span class="tooltiptexts">Logro 16</span></div></div>
-                                        <div class="cl c2"><div class="tooltips"><span class="tooltiptexts">Logro 17</span></div></div>
-                                        <div class="cl c3"><div class="tooltips"><span class="tooltiptexts">Logro 18</span></div></div>
-                                    </div>
-                                    <div class="ach lv7">
-                                        <div class="cl c1"><div class="tooltips"><span class="tooltiptexts">Logro 19</span></div></div>
-                                        <div class="cl c2"><div class="tooltips"><span class="tooltiptexts">Logro 20</span></div></div>
-                                        <div class="cl c3"><div class="tooltips"><span class="tooltiptexts">Logro 21</span></div></div>
-                                    </div>
-                                </div>
-                                <div class="TabbedPanelsContent">
-                                	<div class="foto"></div>
-                                    
-                                    <div class="info">
-                                   		<div class="lvl">Nivel 10</div><div class="xp">3500 / 10000 XP</div>
-                                    	<h2>Nombre</h2>
-                                        <h4>Rango</h4>
-                                        <p>Edad</p> 
-                                        <p>Fecha de Cumpleanos</p>
-                                        <p>Genero</p>
-                                    </div>
-                                    <div class="info_gm">
-                                    	<p>Partidas Ganadas</p>
-                                        <p>Partidas Perdidas</p>
-                                        <p>Mayor Puntaje</p>
-                                    </div>
-                                </div>
+                                    [ CONT2 ]   
+                                
+                                    [ CONT3 ]
                             </div>
                         </div>
                     </div>
@@ -136,6 +87,28 @@ class goodAndDevil(object):
 <script type="text/javascript"> var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1"); </script>
 <!-- Custom Theme JavaScript -->
 <script>
+// Trae el nombre del jugador seleccionado
+$( ".rnk" ).click(function() { 
+	var oID = $(this).attr("id");  
+	var num = $('#'+oID+' .ps').text();
+	
+	$('.jug').hide();
+    $('.jug'+num).show();
+    
+    $('.info_jug').hide();
+    $('.info_jug'+num).show();
+    
+    $(".TabbedPanelsTab").removeClass( "TabbedPanelsTabSelected" )
+    $(".itm2").addClass("TabbedPanelsTabSelected")
+    
+    $(".TabbedPanelsContent").removeClass( "TabbedPanelsContentVisible" )
+    $(".logros ").addClass("TabbedPanelsContentVisible")
+    
+    $('.ranking').hide();
+    $('.logros').show();
+
+});
+
 // Closes the sidebar menu
 $("#menu-close").click(function(e) {
     e.preventDefault();
@@ -210,8 +183,10 @@ $('.map').on('click', onMapClickHandler);
 </body>
 </html>
 """
-
-        return tabla.replace('[ CONT1 ]', miGenerador.generaTable(m))
+        rep = tabla.replace('[ CONT1 ]', miGenerador.generaTable(rnk))\
+            .replace('[ CONT2 ]', miGenerador.generaLogros(lgr))\
+            .replace('[ CONT3 ]', miGenerador.generaInformacion(inf))
+        return rep
 
 
 

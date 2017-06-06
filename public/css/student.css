@@ -5,13 +5,21 @@
     width: 600px;
     margin: 0 auto;
 }
+.about {
+    padding: 10px 0 !important;
+}
+.info .cont{    width: 200px;
+    display: inline-block; text-align: left !important;}
+.info .res{    display: inline-block;
+    width: 90px;
+    text-align: right;}
 .hvr{filter:blur(6px)!important}
 .wrp{width:1000px;margin: 0 auto;}
 *{padding:0;margin:0;outline:none;box-sizing: border-box;}
 .img{width:100%;height:100%;position:fixed;background-image:url(https://images3.alphacoders.com/218/218957.jpg);background-attachment:fixed;background-position:center;background-repeat:no-repeat;background-size:cover}
 .game{position:absolute;top:0;left:0;right:0;bottom:0;margin:auto;height:400px;width:550px;filter:blur(0px)}
 div#colorbox{border:3px outset #d9781f;height:500px!important}
-li.TabbedPanelsTab{width:60px;height:60px;border-radius:71px;margin:0 8%}
+li.TabbedPanelsTab{width:60px;height:60px;border-radius:71px;margin: 0 41px;}
 .intro{filter:blur(6px)}
 .TabbedPanelsTabGroup{margin:0 auto!important;padding:20px 0!important;width:430px;display:-webkit-box}
 .itm3{background-image:url(../img/soldier.svg);background-size:35px;background-repeat:no-repeat;background-position:center;font-size:0!important}
@@ -31,25 +39,34 @@ li.TabbedPanelsTab{width:60px;height:60px;border-radius:71px;margin:0 8%}
 .cl{vertical-align:top;width:32%;display:inline-block;height:100px;background-repeat:no-repeat;background-position:center;background-size:50px;padding:20px 0;-webkit-filter:grayscale(100%);filter:grayscale(100%)}
 .ach.lv1 .cl.c1{background-image:url(https://image.flaticon.com/icons/svg/340/340323.svg)}
 .ach.lv1 .cl.c2{background-image:url(https://image.flaticon.com/icons/svg/340/340324.svg)}
-.ach.lv1 .cl.c3{background-image:url(https://image.flaticon.com/icons/svg/340/340325.svg);-webkit-filter:grayscale(0%)!important;filter:grayscale(0%)!important}
+.ach.lv1 .cl.c3{background-image:url(https://image.flaticon.com/icons/svg/340/340325.svg)}
 .ach.lv2 .cl.c1{background-image:url(https://image.flaticon.com/icons/svg/340/340326.svg)}
 .ach.lv2 .cl.c2{background-image:url(https://image.flaticon.com/icons/svg/340/340327.svg)}
 .ach.lv2 .cl.c3{background-image:url(https://image.flaticon.com/icons/svg/340/340328.svg)}
-.ach.lv3 .cl.c1{background-image:url(https://image.flaticon.com/icons/svg/340/340330.svg);-webkit-filter:grayscale(0%)!important;filter:grayscale(0%)!important}
+.ach.lv3 .cl.c1{background-image:url(https://image.flaticon.com/icons/svg/340/340330.svg)}
 .ach.lv3 .cl.c2{background-image:url(https://image.flaticon.com/icons/svg/340/340331.svg)}
 .ach.lv3 .cl.c3{background-image:url(https://image.flaticon.com/icons/svg/340/340332.svg)}
 .ach.lv4 .cl.c1{background-image:url(https://image.flaticon.com/icons/svg/340/340333.svg)}
 .ach.lv4 .cl.c2{background-image:url(https://image.flaticon.com/icons/svg/340/340334.svg)}
-.ach.lv4 .cl.c3{background-image:url(https://image.flaticon.com/icons/svg/340/340335.svg);-webkit-filter:grayscale(0%)!important;filter:grayscale(0%)!important}
+.ach.lv4 .cl.c3{background-image:url(https://image.flaticon.com/icons/svg/340/340335.svg)}
 .ach.lv5 .cl.c1{background-image:url(https://image.flaticon.com/icons/svg/340/340336.svg)}
 .ach.lv5 .cl.c2{background-image:url(https://image.flaticon.com/icons/svg/340/340337.svg)}
 .ach.lv5 .cl.c3{background-image:url(https://image.flaticon.com/icons/svg/340/340338.svg)}
 .ach.lv6 .cl.c1{background-image:url(https://image.flaticon.com/icons/svg/340/340339.svg)}
-.ach.lv6 .cl.c2{background-image:url(https://image.flaticon.com/icons/svg/340/340340.svg);-webkit-filter:grayscale(0%)!important;filter:grayscale(0%)!important}
+.ach.lv6 .cl.c2{background-image:url(https://image.flaticon.com/icons/svg/340/340340.svg)}
 .ach.lv6 .cl.c3{background-image:url(https://image.flaticon.com/icons/svg/340/340341.svg)}
-.ach.lv7 .cl.c1{background-image:url(https://image.flaticon.com/icons/svg/340/340342.svg);-webkit-filter:grayscale(0%)!important;filter:grayscale(0%)!important}
-.ach.lv7 .cl.c2{background-image:url(https://image.flaticon.com/icons/svg/340/340343.svg);-webkit-filter:grayscale(0%)!important;filter:grayscale(0%)!important}
+.ach.lv7 .cl.c1{background-image:url(https://image.flaticon.com/icons/svg/340/340342.svg)}
+.ach.lv7 .cl.c2{background-image:url(https://image.flaticon.com/icons/svg/340/340343.svg)}
 .ach.lv7 .cl.c3{background-image:url(https://image.flaticon.com/icons/svg/340/340344.svg)}
+
+.ach .est1{-webkit-filter:grayscale(0%)!important;filter:grayscale(0%)!important)}
+
+.jug{ display: none; }
+.jug1{ display: block; }
+
+.info_jug{ display: none; }
+.info_jug1 { display: block; }
+
 .tooltips{position:relative;display:inline-block;text-align: center;width: 100%;height: 60px;font-size: 0px;}
 .tooltips .tooltiptexts{    font-size: 12px;visibility:hidden;width:120px;background-color:#555;color:#fff;text-align:center;border-radius:6px;padding:5px 0;position:absolute;z-index:1;bottom:-50%;left:50%;margin-left:-60px;opacity:0;transition:opacity 1s}
 .tooltips .tooltiptexts::after{    content: "";position: absolute;top: -34%;left: 50%;margin-left: -5px;border-width: 5px;border-style: solid;border-color: transparent transparent #555;}
@@ -128,7 +145,7 @@ p.nm{ color: #b5b5b5;font-size: 20px;
     background-color: rgba(132, 132, 132, 0.62);
 }
 
-.info, .info_gm{font-family: 'Iceland', cursive;}
+.info, .info_gm{font-family: 'Iceland', cursive;margin-top:15px}
 .info h2 {
     text-align: center;
     color: #fff;
@@ -143,5 +160,4 @@ p.nm{ color: #b5b5b5;font-size: 20px;
     padding: 10px 15px;
 }
 
-.info p, .info_gm p{ padding-left:10px; }
 .info_gm{ padding: 15px 0; }
